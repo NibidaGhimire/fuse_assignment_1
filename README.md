@@ -12,25 +12,42 @@ Send a POST request with a sentence, and get a sentiment prediction: `positive`,
 ```bash
 git clone https://github.com/NibidaGhimire/fuse_assignment_1.git
 cd fuse_assignment_1
+```
 
->Install requirements:
+Install requirements:
+```bash
 pip install -r requirements.txt
 python -m textblob.download_corpora
+```
 
->Run the API
+Virtual Environment (This is Optional)
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Run the API
+```bash
 uvicorn app.main:app --reload
+```
 
 
->Test it!
+Test it!
+```bash
 Visit http://localhost:8000/docs
+```
 
->Run with Docker:
+Run with Docker:
+```bash
 docker build -t sentiment-api .
 docker run -p 8000:8000 sentiment-api
+```
 
 
->Running tests:
+Running tests:
+```bash
 pytest
+```
 
 
 
